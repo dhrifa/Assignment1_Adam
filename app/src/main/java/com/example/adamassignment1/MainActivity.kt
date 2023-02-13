@@ -26,9 +26,11 @@ private const val REQUEST_CODE_READ_CONTACTS = 1
 class MainActivity : AppCompatActivity() {
 
     //problem
-    //make screen compatible for any size
-    //overlying
+    //make screen compatible for any size : small size scroll?
+    //gradient diff version sdk
+    //overlapping
     //gradient for drawable
+    //music player, second click->stop music
 
 
     private lateinit var binding: ActivityMainBinding
@@ -62,6 +64,14 @@ class MainActivity : AppCompatActivity() {
             batteryChanged,
             IntentFilter(Intent.ACTION_BATTERY_CHANGED)
         )
+    }
+
+    private fun playMusic() {
+
+        val serviceIntent = Intent(this, MusicService::class.java)
+        Log.d(TAG, "onCreate: $serviceIntent")
+        startService(serviceIntent)
+
     }
 
     private fun checkHasReadContactPermission(): Int {
@@ -142,12 +152,5 @@ class MainActivity : AppCompatActivity() {
 
                 Toast.makeText(it.context, "Snackbar action clicked", Toast.LENGTH_SHORT).show()
             }.show()
-    }
-
-    private fun playMusic() {
-        val serviceIntent = Intent(this, MusicService::class.java)
-        Log.d(TAG, "onCreate: $serviceIntent")
-        startService(serviceIntent)
-
     }
 }

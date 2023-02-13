@@ -24,4 +24,12 @@ class MusicService : Service() {
         player?.release()
         super.onDestroy()
     }
+
+    fun pauseMusic(){
+        player?.pause()
+    }
+
+    fun startMusic(){
+        player?.start()
+    }
 }

@@ -3,6 +3,7 @@ package com.example.adamassignment1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.view.ContentInfoCompat.Flags
 import com.example.adamassignment1.databinding.ActivityLoginBinding
 import com.google.android.material.button.MaterialButton
 
@@ -25,7 +26,10 @@ class LoginActivity : AppCompatActivity() {
     }
 
    private fun loginNavigate() {
-        val navIntent = Intent(this, MainActivity::class.java)
+        val navIntent = Intent(this, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
         startActivity(navIntent)
+//       finish() //kills the current acticity
     }
 }
