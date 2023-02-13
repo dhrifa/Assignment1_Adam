@@ -15,26 +15,25 @@
         android:background="@drawable/gradient">
 
 
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="56dp"-->
+<!--            android:layout_centerInParent="true"-->
+
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:src="@mipmap/home_circle"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="50dp"
-            android:layout_height="56dp"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:layout_centerInParent="true"
-
-            android:layout_centerHorizontal="true"
-            android:src="@mipmap/home_circle"
+            android:src="@drawable/im"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-        <!--    <ImageView-->
-        <!--        android:id="@+id/imageView"-->
-        <!--        android:layout_width="48dp"-->
-        <!--        android:layout_height="56dp"-->
-        <!--        android:background="@drawable/im"-->
-        <!--        android:layout_centerHorizontal="true"-->
-        <!--        android:layout_centerInParent="true"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toTopOf="parent" />-->
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </RelativeLayout>
@@ -44,9 +43,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/relativeLayout"
         android:layout_weight="1"
-        android:translationZ="15dp"
-
-        app:cardElevation="20dp">
+        android:translationZ="15dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
@@ -83,6 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="@string/email"
+                    android:textColor="@color/blue"
                     app:layout_constraintBottom_toTopOf="@id/emailId"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -103,8 +101,9 @@
                     android:id="@+id/passwordLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Password"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/password"
+                    android:textColor="@color/blue"
                     app:layout_constraintBottom_toTopOf="@id/passwordId"
                     app:layout_constraintEnd_toEndOf="@id/emailLabel"
                     app:layout_constraintStart_toStartOf="@id/emailLabel"
@@ -130,10 +129,11 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/loginBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="-45dp"
-            android:translationX="150dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
             android:text="@string/login"
             app:cornerRadius="40dp"
             android:layout_below="@id/cardView"/>
