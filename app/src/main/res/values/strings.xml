@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AdamAssignment1</string>
+    <string name="login">LOGIN</string>
+    <string name="email">Email</string>
+    <string name="player_screen">Player Screen</string>
+    <string name="contact_list">Contact List</string>
+    <string name="name">Name</string>
+</resources>

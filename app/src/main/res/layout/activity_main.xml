@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/playerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/player_screen"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/contactBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_list"
+        app:layout_constraintTop_toBottomOf="@id/playerBtn" />
+
+    <ListView
+        android:id="@+id/listContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contactBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
